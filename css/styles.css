@@ -8747,8 +8747,34 @@ h1.page_title {
   margin-bottom: 8px;
 }
 
-.cancel_step_3 .tags_2 .cont {
+.cancel_step_3 .tags_2 .drop_down_cont {
+  position: relative;
   max-width: 730px;
+}
+
+.cancel_step_3 .tags_2 .drop_down_cont .drop_down_body {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.cancel_step_3 .tags_2 .drop_down_cont .drop_down_body ._drop_item {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 18px;
+  color: #737373;
+  padding: 5px;
+}
+
+.cancel_step_3 .tags_2 .drop_down_cont .drop_down_body ._drop_item:hover {
+  background: #4872f2;
+  color: #fff;
+}
+
+.cancel_step_3 .tags_2 .cont {
   border: 1px solid #dcdcdc;
   border-radius: 4px;
   display: -webkit-box;
