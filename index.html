@@ -3,79 +3,74 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
     <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="stylesheet" href="css/farbtastic.css" type="text/css" />
-    <title>Cards</title>
 </head>
 
 <body>
-    <div class="big_wrapper">
-        <canvas></canvas>
-
-        <div class="control_panel">
-            <div class="panel_title">Настройка парметров</div>
-            <div class="config_inputs">
-                <div class="input_item">
-                    <div class="title">Минимальный размер точки</div>
-                    <div class="input_range">
-                        <input data-type="data-min_rad" type="range" min="2" max="9" value="6">
-                    </div>
-                </div>
-                <div class="input_item">
-                    <div class="title">Максимальный размер точки</div>
-                    <div class="input_range">
-                        <input data-type="data-max_rad" type="range" min="10" max="40" value="20">
-                    </div>
-                </div>
-                <div class="input_item">
-                    <div class="title">Цвет точек</div>
-                    <div class="input_range">
-                        <input data-type="data-color" type="text" id="color" name="color" value="#30fd25e6" /></form>
-                        <div class="val"></div>
-                    </div>
-                </div>
-                <div class="input_item">
-                    <div class="title">Количество точек</div>
-                    <div class="input_range">
-                        <input data-type="data-size" type="range" min="20" max="500" value="150">
-                    </div>
-                </div>
-                <div class="input_item">
-                    <div class="title">Трение</div>
-                    <div class="input_range">
-                        <input data-type="data-smooth" type="range" min="0.1" max="0.95" step="0.05" value="0.65">
-                    </div>
-                </div>
-                <div class="input_item">
-                    <div class="title">Время жизни</div>
-                    <div class="input_range">
-                        <input data-type="data-living_time" type="range" min="200" max="2000" value="1500">
-                    </div>
-                </div>
+    <div class="page_list">
+        <div class="page_link_group">
+            <div class="first_link"><a href="list_tourist.html">Профили туристов</a></div>
+            <div class="sec_link"><a href="prof_tourist.html">Профиль туриста</a></div>
+        </div>
+        <div class="page_link_group">
+            <div class="first_link"><a href="list_authors.html">Профили авторов</a></div>
+            <div class="sec_link"><a href="prof_author.html">Профиль автора</a></div>
+        </div>
+        <div class="page_link_group">
+            <div class="first_link"><a href="new_manufac.html">Новые авторы</a></div>
+            <div class="sec_link"><a href="prof_new_author.html">Профиль нового автора</a>
             </div>
         </div>
+        <div class="page_link_group">
+            <div class="first_link"><a href="authors_on_approval.html">Авторы на утверждении</a></div>
+            <div class="sec_link"><a href="prof_approval_author.html">Профиль автора на утверждении</a></div>
+        </div>
+
+        <div class="page_link_group">
+            <div class="first_link"><a href="expiriance_list.html">Впечатления список</a></div>
+            <div class="sec_link"><a href="expiriance_item.html">Впечатление отдельно</a></div>
+
+            <div class="first_link"><a href="expiriance_list_moderate.html">Требуется модерация</a></div>
+            <div class="sec_link"><a href="expiriance_item_moderate.html">Требуется модерация впечатление отдельно</a>
+            </div>
+
+            <div class="first_link"><a href="expiriance_list_brone.html">Впечатления бронирование список</a></div>
+            <div class="sec_link"><a href="expiriance_item_brone.html">Впечатления бронирование</a>
+            </div>
+            <div class="sec_link"><a href="canceling_brone.html">Отмена бронирования</a></div>
+        </div>
+        <div class="page_link_group">
+            <div class="first_link"><a href="recevises_1.html">Отзывы туристов</a></div>
+            <div class="first_link"><a href="recevises_2.html">Отзывы поставщиков</a></div>
+        </div>
+        <div class="page_link_group">
+            <div class="first_link"><a href="builling.html">Биллинг</a></div>
+            <div class="first_link"><a href="builling_operations.html">Биллинг операции</a></div>
+            <div class="first_link"><a href="builling_payments.html">Начисления</a></div>
+        </div>
+
+        <div class="page_link_group">
+            <div class="first_link"><a href="notification_do.html">Уведомления отправить</a></div>
+            <div class="first_link"><a href="notification_stat.html">Уведомления статистика</a></div>
+        </div>
+        <div class="page_link_group">
+            <div class="first_link"><a href="ad.html">Реклама</a></div>
+            <div class="first_link"><a href="ad_2.html">Все покупки</a></div>
+            <div class="first_link"><a href="ad_3.html">Бонусные сертификаты</a></div>
+        </div>
+
+        <div class="page_link_group">
+            <div class="first_link"><a href="personal.html">Персонал</a></div>
+            <div class="first_link"><a href="prof_employee.html">Профиль сотрудника</a></div>
+            <div class="first_link"><a href="personal_list.html">Профили список</a></div>
+        </div>
+
+        <div class="page_link_group">
+            <div class="first_link"><a href="settings.html">Настройки</a></div>
+        </div>
     </div>
-
-    <!-- DotMinRad: 6,
-        DotMaxRad: 20,
-        massFactor: 0.002,
-        deafColor: ` rgba(48, 253, 37, 0.9)`,
-        pi: 2 * Math.PI,
-        smooth: .65,
-        sphereRad: 300,
-        cursorDotRad: 25,
-        mouseSize: 100,
-        time: 1500,
-        maxSize: 150, -->
-    <script src="scripts/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="scripts/farbtastic.js"></script>
-    <script src="scripts/slick.min.js"></script>
-    <script src="scripts/script.js"></script>
-
 </body>
 
 </html>

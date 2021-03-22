@@ -18,7 +18,159 @@ body {
 		overflow: hidden;
 	}
 }
-
+.choose_town {
+	position: fixed;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+	z-index: 1000;
+	padding: 0 20px;
+	transition: 0.3s;
+	.choose_content_box {
+		max-width: 1110px;
+		margin: 0 auto;
+		padding-top: 60px;
+		padding-bottom: 40px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		.choose_header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 25px;
+			.title {
+				font-weight: bold;
+				font-size: 18px;
+				line-height: 20px;
+				color: #3c3c3c;
+			}
+			.cross {
+				width: 32px;
+				height: 32px;
+				cursor: pointer;
+				position: relative;
+				&:after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(45deg);
+					width: 100%;
+					height: 2px;
+					display: block;
+					background: #737373;
+				}
+				&:before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(-45deg);
+					width: 100%;
+					height: 2px;
+					display: block;
+					background: #737373;
+				}
+			}
+		}
+		.choose_search_row {
+			position: relative;
+			max-width: 476px;
+			margin-bottom: 24px;
+			input {
+				width: 100%;
+				height: 33px;
+				padding-right: 24px;
+				padding-bottom: 12px;
+				border: none;
+				border-bottom: 1px solid #dcdcdc;
+				font-size: 16px;
+				line-height: 20px;
+				color: #737373;
+				&._focused {
+					border-bottom: 1px solid #3c3c3c;
+				}
+			}
+			.icon {
+				position: absolute;
+				top: 4px;
+				right: 0;
+			}
+		}
+		.search_town_body {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: flex-start;
+			overflow: auto;
+			//height: calc(100vh - 40px -);
+			.town_colum {
+				flex: 0 1 25%;
+				padding-right: 30px;
+				.popular_towns {
+					margin-bottom: 12px;
+					.popular_town {
+						font-weight: 600;
+						font-size: 14px;
+						line-height: 18px;
+						color: #3c3c3c;
+						margin-bottom: 12px;
+						cursor: pointer;
+					}
+				}
+				.town_item {
+					margin-bottom: 12px;
+					.letter_title {
+						font-weight: 600;
+						font-size: 14px;
+						line-height: 18px;
+						color: #3c3c3c;
+						margin-bottom: 8px;
+					}
+					.town {
+						cursor: pointer;
+						font-size: 14px;
+						line-height: 18px;
+						color: #737373;
+						margin-bottom: 12px;
+					}
+				}
+				.search_result {
+					margin-bottom: 12px;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 20px;
+					color: #737373;
+					transition: 0.2s;
+					cursor: pointer;
+					&:first-child {
+						color: #3c3c3c;
+					}
+					&:hover {
+						color: #4872f2;
+					}
+				}
+				@media screen and (max-width: 700px) {
+					flex: 0 1 calc(33.333%);
+				}
+				@media screen and (max-width: 550px) {
+					flex: 0 1 calc(50%);
+				}
+				@media screen and (max-width: 400px) {
+					flex: 0 1 calc(100%);
+				}
+			}
+			@media screen and (max-width: 700px) {
+				flex-wrap: wrap;
+			}
+		}
+	}
+	&._active {
+		top: 0;
+	}
+}
 .page_list {
 	padding: 20px;
 	.page_link_group {
@@ -706,6 +858,15 @@ h1.page_title {
 						opacity: 1;
 					}
 				}
+				&._blue_hover {
+					background: #edf1fe;
+					&:after {
+						opacity: 1;
+					}
+					&:before {
+						opacity: 1;
+					}
+				}
 			}
 		}
 		&._active {
@@ -746,7 +907,7 @@ h1.page_title {
 			z-index: 10;
 		}
 
-		&._active {
+		&._blue_hover {
 			&:after {
 				opacity: 1;
 			}
@@ -817,7 +978,7 @@ h1.page_title {
 				transition: 0.2s;
 				z-index: 10;
 			}
-			&:first-child {
+			&._blue_hover {
 				&:after {
 					opacity: 1;
 				}
@@ -1763,15 +1924,16 @@ h1.page_title {
 
 	.big_form_cont {
 		margin: 0;
-		padding: 32px 24px;
-		border: 1px solid #dcdcdc;
-		border-radius: 8px;
 		//padding-bottom: 114px;
 		.content_box {
+			padding: 32px 24px;
+			border: 1px solid #dcdcdc;
+			border-radius: 8px 8px 0 0;
+			border-bottom: none;
 			display: flex;
 			align-items: stretch;
 			flex-wrap: wrap;
-			margin: 0 -10px;
+			//margin: 0 -10px;
 			.input_title {
 				font-size: 14px;
 				line-height: 18px;
@@ -1860,14 +2022,25 @@ h1.page_title {
 					display: inline-block;
 					cursor: pointer;
 					position: relative;
-					width: 24px;
+
 					height: 24px;
-					border-radius: 50%;
+
 					margin-right: 8px;
-					border: 1px solid #b9b9b9;
-					border-radius: 50%;
+
 					position: relative;
 					transition: 0.2s;
+					padding-left: 32px;
+					&:after {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 24px;
+						height: 24px;
+						display: block;
+						border: 1px solid #b9b9b9;
+						border-radius: 50%;
+					}
 					&:before {
 						content: "";
 						display: block;
@@ -1876,20 +2049,24 @@ h1.page_title {
 						height: 14px;
 						background: #4872f2;
 						position: absolute;
-						left: 50%;
+						left: 5px;
 						top: 50%;
-						transform: translate(-50%, -50%);
+						transform: translate(0%, -50%);
 						border-radius: 50%;
 						opacity: 0;
 						transition: 0.2s;
 					}
 				}
 				input[type="radio"]:checked + label {
-					border: 1px solid #4872f2;
 				}
-				input[type="radio"]:checked + label:before {
+				input[type="radio"]:checked + label:before,
+				label:after {
 					opacity: 1;
 				}
+				input[type="radio"]:checked + label:after {
+					border: 1px solid #4872f2;
+				}
+
 				@media screen and (max-width: 1050px) {
 					flex: 0 1 100%;
 				}
@@ -1906,10 +2083,13 @@ h1.page_title {
 			align-items: center;
 			justify-content: center;
 			border-top: 1px solid #dcdcdc;
-			margin: 0 -24px;
+			//margin: 0 -24px;
 			padding: 47px 0 0;
+			border: 1px solid #dcdcdc;
+			border-radius: 0 0 8px 8px;
 			.img_item {
 				margin: 0 16px;
+				position: relative;
 				a {
 					max-width: 84px;
 					margin: 0 auto 6px;
@@ -1927,6 +2107,17 @@ h1.page_title {
 					line-height: 16px;
 					color: #737373;
 					text-align: center;
+				}
+				.cross {
+					position: absolute;
+					top: 0;
+					right: 0;
+					cursor: pointer;
+					transform: translate(50%, -50%);
+					background: #fff;
+					border-radius: 50%;
+					width: 18px;
+					height: 18px;
 				}
 				@media screen and (max-width: 800px) {
 					margin-bottom: 10px;

@@ -91,7 +91,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="position">
+						<div class="position _active">
 							<div class="_drop_down_title">
 								<div class="icon">
 									<img src="img/location.svg" alt="">
@@ -620,14 +620,18 @@
 											<div class="input_radio_cont">
 												<div class="input">
 													<input id="male" type="radio" name="gender">
-													<label for="male"></label>
+													<label for="male">
+														<div class="text">Жен.</div>
+													</label>
 
-													<div class="text">Жен.</div>
+
 												</div>
 												<div class="input">
 													<input id="female" type="radio" name="gender">
-													<label for="female"></label>
-													<div class="text">Муж.</div>
+													<label for="female">
+														<div class="text">Муж.</div>
+													</label>
+
 												</div>
 											</div>
 										</div>
@@ -676,55 +680,259 @@
 											<img src="img/img_1.png" alt="">
 										</a>
 										<div class="item_title">Паспо...т.jpeg</div>
+										<div class="cross">
+											<img src="img/round_cross.svg" alt="">
+										</div>
 									</div>
 									<div class="img_item">
 										<a href="#">
 											<img src="img/img_2.png" alt="">
 										</a>
 										<div class="item_title">Стран...и.jpeg</div>
+										<div class="cross">
+											<img src="img/round_cross.svg" alt="">
+										</div>
 									</div>
 									<div class="img_item">
 										<a href="#">
 											<img src="img/pdf.svg" alt="">
 										</a>
 										<div class="item_title">Договор.pdf</div>
+										<div class="cross">
+											<img src="img/round_cross.svg" alt="">
+										</div>
 									</div>
 									<div class="img_item">
 										<a href="#">
 											<img src="img/xls.svg" alt="">
 										</a>
 										<div class="item_title">Карточ..а.xlsx</div>
+										<div class="cross">
+											<img src="img/round_cross.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="verdict_cont _with_drop">
+									<div class="drop_cont">
+										<div class="text">Выберите дейсвие с профилем</div>
+										<div class="drop_down_list">
+											<div class="_drop_down_title">
+												<div class="text">Все</div>
+												<div class="arrow">
+													<img src="img/arrow_down.svg" alt="">
+												</div>
+											</div>
+											<div class="drop_down_body">
+												<div class="_drop_item">Все</div>
+												<div class="_drop_item">Актуальные</div>
+												<div class="_drop_item">Не подтвержденные</div>
+												<div class="_drop_item">Предварительные заявки</div>
+											</div>
+										</div>
+									</div>
+									<div class="verdict_btn _blue_btn">
+										<div class="text">Сохранить</div>
 									</div>
 								</div>
 							</form>
-							<div class="verdict_cont _with_drop">
-								<div class="drop_cont">
-									<div class="text">Выберите дейсвие с профилем</div>
-									<div class="drop_down_list">
-										<div class="_drop_down_title">
-											<div class="text">Все</div>
-											<div class="arrow">
-												<img src="img/arrow_down.svg" alt="">
-											</div>
-										</div>
-										<div class="drop_down_body">
-											<div class="_drop_item">Все</div>
-											<div class="_drop_item">Актуальные</div>
-											<div class="_drop_item">Не подтвержденные</div>
-											<div class="_drop_item">Предварительные заявки</div>
-										</div>
-									</div>
-								</div>
-								<div class="verdict_btn _blue_btn">
-									<div class="text">Сохранить</div>
-								</div>
-							</div>
+
 						</div>
 
 					</div>
 				</div>
 			</div>
 		</main>
+		<div class="choose_town">
+			<div class="choose_content_box">
+				<div class="choose_header">
+					<div class="title">Выберите город, где Вы находитесь:</div>
+					<div class="cross" id="choose_town_cross">
+
+					</div>
+				</div>
+				<form action="#" class="choose_search_row">
+					<input type="text" id="search_town_input" placeholder="Введите название города">
+					<div class="icon">
+						<img src="img/search.svg" alt="">
+					</div>
+
+				</form>
+				<div class="search_town_body">
+					<div class="town_colum">
+						<div class="popular_towns">
+							<div class="popular_town town">Москва</div>
+							<div class="popular_town town">Санкт-Петербур</div>
+							<div class="popular_town town">Новосибирск</div>
+							<div class="popular_town town">Екатеринбург</div>
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+						</div>
+					</div>
+					<div class="town_colum">
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+						</div>
+					</div>
+					<div class="town_colum">
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+
+						</div>
+					</div>
+					<div class="town_colum">
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+
+						</div>
+						<div class="town_item">
+							<div class="letter_title">А</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+							<div class="town">Абакан</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
